@@ -16,15 +16,34 @@
 <a href="form.html"><button>등록하기</button></a>
 <hr>
 
-<%
+<% 
+ /*
 	ArrayList<MemberBean> datas = new ArrayList<MemberBean>();
 	datas = mmb.selectAll(mb);
 	
 	for(int i=0; i<datas.size(); i++){
 		out.print(datas.get(i).getMname()+" "+datas.get(i).getScore()+"점 "+datas.get(i).getGender()+"<br>");
 	}
-	
+ */	
 %>
+
+<ol>
+<%
+	ArrayList<MemberBean> datas=mmb.selectAll(mb);
+	if(datas.size()>0){
+		for(MemberBean v:datas){
+%>
+		<li><%=v.getMname()%> <%=v.getScore()%>점 <%=v.getGender()%></li>
+<%
+		}
+	}
+	else{
+		out.println("<H3>출력할 데이터가 없습니다...</H3>");
+	}
+%>
+</ol>
+
+
 
 </body>
 </html>
