@@ -1,0 +1,30 @@
+main.jsp
+   이 페이지가 표지 페이지
+   [등록하기]
+   ---------------------------
+   1. 홍길동 90점 남
+   2. 아무무 58점 남
+   3. 티모 81점 남
+   4. 애쉬 67점 여
+   5. 가렌 43점 남
+   ...
+   
+form.html
+   이름(mname)
+   점수(score)
+   성별(gender)
+   [등록하기]
+   
+result.jsp
+   입력하신 정보
+   가렌 43점 남
+   [메인으로 돌아가기]
+   
+MemberBean.java
+   MemberVO 역할
+   
+MemberManagerBean.java
+   MEMBER 테이블 역할
+   DB 역할
+   MemberDAO 역할
+   ArrayList<MemberBean>
